@@ -4,9 +4,10 @@
   "description": "echart webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.js --progress --profile --colors --hot --inline",
+    "dev": "webpack --watch --colors ",
     "build": "set NODE_ENV=production&& webpack --optimize-minimize",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "gulp browser-sync"
   },
   "repository": {
     "url": "git@github.com:liminshen/echart.git",
@@ -18,9 +19,11 @@
     "echarts": "^3.3.2"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.5",
     "clean-webpack-plugin": "^0.1.14",
     "copy-webpack-plugin": "^4.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
     "html-webpack-plugin": "^2.24.1",
     "open-browser-webpack-plugin": "0.0.3",
     "webpack": "^1.14.0"

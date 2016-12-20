@@ -2,6 +2,10 @@ var echarts = require('echarts');
 var dom = document.getElementById("main");
 // 引入柱状图
 require('echarts/map/js/china');
+$.ajax({
+    url : 'localhost:3002/activity/goods/list.json',
+    success : function(){}
+})
 var myChart = echarts.init(dom);
 var geoCoordMap = {
     '上海': [121.4648,31.2891],
